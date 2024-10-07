@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO List</title>
+    <style>
+        body {
+            background-color: #110f0f;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background-color: #312b35;
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px; /* Set a fixed width for better layout */
+        }
+        .products {
+            text-align: center;
+        }
+
+        li{
+            list-style: none;
+        }
+        
+        .product-price{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+        #cart-total{
+            text-align: end;
+        }
+        #checkout-btn, .addToCart-btn{
+            background-color: #5c3ebe;
+            color: white;
+            padding: 3px;
+            border-radius: 5px;
+            width: 80px; /* Fixed width for button */
+            margin-left: 6px;
+            cursor: pointer;
+        }
+        .remove-itemBtn{
+            background-color: #d21e1e;
+            color: white;
+            padding: 3px;
+            border-radius: 5px;
+            width: 80px; /* Fixed width for button */
+            margin-left: 6px;
+            cursor: pointer;
+        }
+        .itemsInCart{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+        .priceTotal{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="products">Products</h1>
+        <div id="products-list">
+            
+        </div>
+        <h2>Shopping Cart</h2>
+        <div id="cart-items">
+            <p id="empty-cart" class="hidden">Your cart is empty!!</p>
+        </div>
+
+        <div id="cart-total" class="hidden">
+            <p>Total: <span id="total-price">$0.0</span></p>
+            <button id="checkout-btn">Checkout</button>
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
